@@ -362,7 +362,20 @@
       }
     }
   </style>
-</head>
+<script>
+function importHotmart(){ 
+  var imported = document.createElement("script"); 
+  imported.src = "https://static.hotmart.com/checkout/widget.min.js"; 
+  document.head.appendChild(imported); 
+
+  var link = document.createElement("link"); 
+  link.rel = "stylesheet"; 
+  link.type = "text/css"; 
+  link.href = "https://static.hotmart.com/css/hotmart-fb.min.css"; 
+  document.head.appendChild(link);
+}
+importHotmart();
+</script></head>
 
 <body>
 
@@ -542,7 +555,17 @@
     </div>
   </section>
 
-  <footer>
+  <section style="text-align:center;padding:80px 10%;">
+  <a href="https://go.hotmart.com/E105549950G" class="cta" target="_blank">
+    QUERO ACESSAR O LIVRO COMPLETO
+  </a>
+</section>
+<section style="text-align:center;padding:80px 10%;">
+  <a onclick="return false;" href="https://pay.hotmart.com/E105549950G?checkoutMode=2" 
+     class="cta hotmart-fb hotmart__button-checkout" target="_blank">
+     QUERO ACESSAR O LIVRO COMPLETO
+  </a>
+</section><footer>
     <p class="verse">
       “Vejo nos meus membros outra lei, guerreando contra a lei da minha mente…”
     </p>
@@ -552,3 +575,6 @@
 
 </body>
 </html>
+
+
+
