@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>7 Dias de Guerra Interna — Pastor Amauri Fernandes</title>
+  <meta name="description" content="O protocolo prático para começar a enfraquecer o lobo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --blood:#8B0000;
+      --blood-light:#b00000;
+      --gold:#D4AF37;
+      --black:#000;
+      --ivory:#fffff0;
+      --ash:#b8b8b8;
+    }
+
+    html { scroll-behavior:smooth; }
+
+    body {
+      background:var(--black);
+      color:var(--ivory);
+      font-family:'Cormorant Garamond', serif;
+      overflow-x:hidden;
+    }
+
+    section { position:relative; }
+
+    .hero {
+      min-height:100vh;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      padding:60px 8%;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(212,175,55,.25), transparent 30%),
+        linear-gradient(180deg, #000 0%, #0b0000 100%);
+      gap:60px;
+    }
+
+    .hero-content { max-width:720px; }
+
+    .eyebrow {
+      font-family:'Bebas Neue', sans-serif;
+      color:var(--gold);
+      letter-spacing:6px;
+      font-size:14px;
+      margin-bottom:32px;
+    }
+
+    .title {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(48px, 7vw, 100px);
+      line-height:.92;
+      font-weight:900;
+      margin-bottom:42px;
+    }
+
+    .title span { display:block; }
+
+    .red {
+      color:var(--blood-light);
+      font-style:italic;
+    }
+
+    .hook {
+      font-size:clamp(23px, 2.6vw, 34px);
+      line-height:1.45;
+      margin-bottom:34px;
+      max-width:650px;
+    }
+
+    .gold { color:var(--gold); font-weight:700; }
+
+    .cta {
+      display:inline-block;
+      background:var(--blood);
+      color:var(--ivory);
+      text-decoration:none;
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:2.5px;
+      font-size:18px;
+      padding:22px 42px;
+      border-radius:60px;
+      box-shadow:0 12px 40px rgba(139,0,0,.55);
+      transition:.3s ease;
+      text-align:center;
+    }
+
+    .cta:hover {
+      transform:translateY(-3px);
+      background:var(--blood-light);
+      box-shadow:0 18px 60px rgba(139,0,0,.75);
+    }
+
+    .price-top {
+      margin-top:16px;
+      color:var(--gold);
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:2px;
+      font-size:20px;
+    }
+
+    .microcopy {
+      margin-top:16px;
+      color:var(--ash);
+      font-size:16px;
+      line-height:1.4;
+    }
+
+    .cover-wrap {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .cover {
+      width:100%;
+      max-width:470px;
+      border-radius:14px;
+      box-shadow:
+        0 35px 100px rgba(0,0,0,.9),
+        0 0 90px rgba(212,175,55,.35),
+        0 0 80px rgba(139,0,0,.35);
+    }
+
+    .section-dark {
+      padding:110px 10%;
+      background:#000;
+    }
+
+    .section-red {
+      padding:110px 10%;
+      background:linear-gradient(180deg, #000 0%, #120000 100%);
+    }
+
+    .center {
+      max-width:920px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .text-big {
+      font-size:clamp(22px, 2.4vw, 30px);
+      line-height:1.65;
+    }
+
+    .text-medium {
+      font-size:clamp(19px, 2vw, 23px);
+      line-height:1.75;
+    }
+
+    .section-title {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(38px, 5vw, 64px);
+      line-height:1;
+      margin-bottom:44px;
+      font-weight:900;
+      text-align:center;
+    }
+
+    .section-title::after {
+      content:"";
+      display:block;
+      width:90px;
+      height:3px;
+      background:var(--gold);
+      margin:28px auto 0;
+    }
+
+    .cards {
+      max-width:1200px;
+      margin:70px auto 0;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:28px;
+    }
+
+    .card {
+      background:rgba(255,255,255,.025);
+      border:1px solid rgba(212,175,55,.25);
+      padding:42px 30px;
+      border-radius:22px;
+      min-height:260px;
+      transition:.3s ease;
+    }
+
+    .card:hover {
+      transform:translateY(-8px);
+      border-color:var(--gold);
+      background:rgba(255,255,255,.055);
+      box-shadow:0 20px 60px rgba(0,0,0,.55);
+    }
+
+    .card-icon {
+      font-size:42px;
+      margin-bottom:22px;
+      display:block;
+    }
+
+    .card-title {
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:2px;
+      color:var(--gold);
+      font-size:22px;
+      margin-bottom:16px;
+    }
+
+    .card-text {
+      color:var(--ash);
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    .offer {
+      padding:120px 10%;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,.18), transparent 35%),
+        #000;
+    }
+
+    .offer-box {
+      max-width:780px;
+      margin:0 auto;
+      border:2px solid var(--gold);
+      border-radius:30px;
+      padding:60px;
+      background:linear-gradient(135deg, rgba(30,0,0,.8), rgba(0,0,0,.9));
+      box-shadow:0 30px 90px rgba(0,0,0,.85);
+      text-align:center;
+    }
+
+    .offer-title {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(38px, 5vw, 60px);
+      line-height:1.05;
+      margin-bottom:24px;
+    }
+
+    .offer-subtitle {
+      color:var(--ash);
+      font-size:20px;
+      line-height:1.6;
+      margin-bottom:34px;
+    }
+
+    .price {
+      font-family:'Bebas Neue', sans-serif;
+      color:var(--gold);
+      font-size:clamp(42px, 5vw, 64px);
+      letter-spacing:2px;
+      margin-bottom:30px;
+    }
+
+    .small {
+      margin-top:20px;
+      color:var(--ash);
+      font-size:15px;
+      line-height:1.4;
+    }
+
+    .final {
+      padding:140px 10%;
+      background:linear-gradient(180deg, #0b0000 0%, #000 100%);
+    }
+
+    footer {
+      padding:55px 20px;
+      text-align:center;
+      border-top:1px solid rgba(212,175,55,.25);
+      background:#000;
+      color:var(--ash);
+    }
+
+    .verse {
+      font-size:22px;
+      font-style:italic;
+      color:var(--ivory);
+      margin-bottom:10px;
+    }
+
+    .ref {
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:3px;
+      color:var(--gold);
+      margin-bottom:24px;
+    }
+
+    @media (max-width:1050px) {
+      .hero {
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero-content { margin:0 auto; }
+
+      .cards { grid-template-columns:repeat(2,1fr); }
+    }
+
+    @media (max-width:700px) {
+      .hero {
+        padding:55px 24px;
+        gap:40px;
+      }
+
+      .section-dark,
+      .section-red,
+      .offer,
+      .final {
+        padding:80px 24px;
+      }
+
+      .cards { grid-template-columns:1fr; }
+
+      .offer-box { padding:42px 24px; }
+
+      .cta {
+        width:100%;
+        font-size:16px;
+        padding:20px 26px;
+      }
+
+      .cover { max-width:340px; }
+
+      .text-big { font-size:22px; }
+      .text-medium { font-size:19px; }
+      .hook { font-size:24px; }
+      .section-title { font-size:38px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">MÉTODO LOBO INTERIOR — MDPAF</div>
+
+      <h1 class="title">
+        <span>7 DIAS DE</span>
+        <span class="red">GUERRA</span>
+        <span>INTERNA</span>
+      </h1>
+
+      <p class="hook">
+        Você já entendeu que existe uma guerra.<br><br>
+
+        Agora precisa agir.<br><br>
+
+        <span class="gold">
+          Um protocolo direto para começar a enfraquecer o lobo.
+        </span>
+      </p>
+
+      <a href="https://pay.hotmart.com/I105571615V" class="cta" target="_blank" rel="noopener">
+        QUERO COMEÇAR OS 7 DIAS
+      </a>
+
+      <p class="price-top">ACESSO IMEDIATO — R$ 9,90</p>
+
+      <p class="microcopy">
+        Não é plano mágico.<br>
+        É protocolo de guerra.
+      </p>
+    </div>
+
+    <div class="cover-wrap">
+      <img src="7-DIAS-GUERRA-INTERNA.png" alt="Capa do protocolo 7 Dias de Guerra Interna" class="cover">
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="center">
+      <p class="text-big">
+        Entender a guerra é o começo.<br><br>
+
+        Mas se você não fizer nada…<br>
+        o padrão continua.<br><br>
+
+        <span class="gold">
+          O lobo não enfraquece com intenção.<br>
+          Ele enfraquece quando você confronta.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-red">
+    <div class="center">
+      <h2 class="section-title">Sete dias. Sete confrontos.</h2>
+
+      <p class="text-medium">
+        Cada dia foi construído para atacar um ponto da guerra interna.<br><br>
+
+        Gatilho.<br>
+        Combustível.<br>
+        Mentira.<br>
+        Fuga.<br>
+        Autoridade.<br>
+        Substituição.<br>
+        Prestação de contas.<br><br>
+
+        <span class="gold">Não pule etapas. A ordem importa.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <h2 class="section-title">O que você vai fazer nesses 7 dias</h2>
+
+    <div class="cards">
+      <div class="card">
+        <span class="card-icon">👁️</span>
+        <h3 class="card-title">IDENTIFICAR</h3>
+        <p class="card-text">
+          Reconhecer quando o lobo aparece e quais emoções precedem a queda.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">✂️</span>
+        <h3 class="card-title">CORTAR</h3>
+        <p class="card-text">
+          Remover combustível, acesso e terreno antes que a luta cresça.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">⚔️</span>
+        <h3 class="card-title">CONFRONTAR</h3>
+        <p class="card-text">
+          Expor a mentira que sempre vem antes da queda.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">✝️</span>
+        <h3 class="card-title">RESISTIR</h3>
+        <p class="card-text">
+          Invocar o Nome, ocupar o vazio e prestar contas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-red">
+    <div class="center">
+      <h2 class="section-title">Isso não é teoria</h2>
+
+      <p class="text-medium">
+        É prática.<br><br>
+
+        Você vai observar.<br>
+        Cortar.<br>
+        Escrever.<br>
+        Fugir.<br>
+        Orar.<br>
+        Substituir.<br>
+        Prestar contas.<br><br>
+
+        <span class="gold">
+          Porque aquilo que você não confronta continua operando.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="center">
+      <p class="text-big">
+        Sete dias não vão matar o lobo.<br><br>
+
+        Mas podem enfraquecê-lo o suficiente<br>
+        para você começar a respirar.<br><br>
+
+        <span class="gold">
+          Um dia de cada vez.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section class="offer" id="comprar">
+    <div class="offer-box">
+      <h2 class="offer-title">Comece hoje.</h2>
+
+      <p class="offer-subtitle">
+        Acesse o Protocolo 7 Dias de Guerra Interna e comece a enfraquecer o que
+        tem te puxado de volta para o mesmo lugar.
+      </p>
+
+      <div class="price">R$ 9,90</div>
+
+      <a class="cta" href="https://pay.hotmart.com/I105571615V" target="_blank" rel="noopener">
+        QUERO COMEÇAR AGORA
+      </a>
+
+      <p class="small">
+        Acesso imediato. Produto digital. Direção prática para 7 dias.
+      </p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="center">
+      <p class="text-big">
+        A guerra não terminou.<br><br>
+
+        Mas você não precisa continuar reagindo do mesmo jeito.<br><br>
+
+        <span class="gold">
+          Comece hoje.<br>
+          Um dia de cada vez.<br>
+          E desta vez… lute certo.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section style="text-align:center;padding:80px 10%;background:#000;">
+    <a href="https://pay.hotmart.com/I105571615V" class="cta" target="_blank" rel="noopener">
+      QUERO COMEÇAR OS 7 DIAS
+    </a>
+  </section>
+
+  <footer>
+    <p class="verse">
+      “Andai no Espírito e jamais satisfareis à concupiscência da carne.”
+    </p>
+    <p class="ref">GÁLATAS 5:16</p>
+    <p>Pastor Amauri Fernandes · 7 Dias de Guerra Interna</p>
+  </footer>
+
+</body>
+</html>
