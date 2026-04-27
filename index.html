@@ -4,33 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>O Lobo em Mim — Pastor Amauri Fernandes</title>
-  <meta name="description" content="A batalha invisível entre quem você quer ser e o que dentro de você insiste em te dominar." />
+  <title>Mapa da Guerra Interna — Pastor Amauri Fernandes</title>
+  <meta name="description" content="Antes de tentar vencer a guerra, você precisa entender onde ela começa." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
       --blood: #8B0000;
       --blood-light: #b00000;
       --gold: #D4AF37;
       --black: #000;
-      --dark: #080000;
       --ivory: #fffff0;
       --ash: #b8b8b8;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       background: var(--black);
@@ -39,9 +32,7 @@
       overflow-x: hidden;
     }
 
-    section {
-      position: relative;
-    }
+    section { position: relative; }
 
     .hero {
       min-height: 100vh;
@@ -55,9 +46,7 @@
       gap: 60px;
     }
 
-    .hero-content {
-      max-width: 720px;
-    }
+    .hero-content { max-width: 720px; }
 
     .eyebrow {
       font-family: 'Bebas Neue', sans-serif;
@@ -69,15 +58,13 @@
 
     .title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(58px, 8vw, 118px);
-      line-height: 0.9;
+      font-size: clamp(52px, 7vw, 104px);
+      line-height: .92;
       font-weight: 900;
       margin-bottom: 42px;
     }
 
-    .title span {
-      display: block;
-    }
+    .title span { display: block; }
 
     .red {
       color: var(--blood-light);
@@ -91,10 +78,7 @@
       max-width: 650px;
     }
 
-    .gold {
-      color: var(--gold);
-      font-weight: 700;
-    }
+    .gold { color: var(--gold); font-weight: 700; }
 
     .cta {
       display: inline-block;
@@ -254,31 +238,12 @@
       margin-bottom: 40px;
     }
 
-    .lead-form {
-      display: grid;
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .lead-form input {
-      width: 100%;
-      padding: 18px 22px;
-      border-radius: 12px;
-      border: 1px solid rgba(212,175,55,.4);
-      background: rgba(255,255,255,.06);
-      color: var(--ivory);
-      font-size: 18px;
-      font-family: 'Cormorant Garamond', serif;
-    }
-
-    .lead-form input::placeholder {
-      color: #aaa;
-    }
-
-    .lead-form button {
-      border: none;
-      cursor: pointer;
-      margin-top: 12px;
+    .price {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--gold);
+      font-size: clamp(42px, 5vw, 64px);
+      letter-spacing: 2px;
+      margin-bottom: 30px;
     }
 
     .small {
@@ -321,13 +286,9 @@
         text-align: center;
       }
 
-      .hero-content {
-        margin: 0 auto;
-      }
+      .hero-content { margin: 0 auto; }
 
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .cards { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 700px) {
@@ -340,17 +301,12 @@
       .section-red,
       .offer,
       .final {
-      padding: 140px 10%;
-      background: linear-gradient(180deg, #0b0000 0%, #000 100%);
-    }
-
-      .cards {
-        grid-template-columns: 1fr;
+        padding: 80px 24px;
       }
 
-      .offer-box {
-        padding: 42px 24px;
-      }
+      .cards { grid-template-columns: 1fr; }
+
+      .offer-box { padding: 42px 24px; }
 
       .cta {
         width: 100%;
@@ -358,138 +314,90 @@
         padding: 20px 26px;
       }
 
-      .cover {
-        max-width: 340px;
-      }
+      .cover { max-width: 340px; }
+
+      .text-big { font-size: 22px; }
+      .text-medium { font-size: 19px; }
+      .hook { font-size: 24px; }
+      .section-title { font-size: 38px; }
     }
-  
-    /* AJUSTE PREMIUM MOBILE */
-    @media (max-width: 700px) {
-      .text-big {
-        font-size: 22px;
-      }
-
-      .text-medium {
-        font-size: 19px;
-      }
-
-      .hook {
-        font-size: 24px;
-      }
-
-      .section-title {
-        font-size: 38px;
-      }
-    }
-</style>
-<script>
-function importHotmart(){ 
-  var imported = document.createElement("script"); 
-  imported.src = "https://static.hotmart.com/checkout/widget.min.js"; 
-  document.head.appendChild(imported); 
-
-  var link = document.createElement("link"); 
-  link.rel = "stylesheet"; 
-  link.type = "text/css"; 
-  link.href = "https://static.hotmart.com/css/hotmart-fb.min.css"; 
-  document.head.appendChild(link);
-}
-importHotmart();
-</script></head>
+  </style>
+</head>
 
 <body>
 
   <section class="hero">
     <div class="hero-content">
-      <div class="eyebrow">PASTOR AMAURI FERNANDES</div>
+      <div class="eyebrow">MÉTODO LOBO INTERIOR — MDPAF</div>
 
       <h1 class="title">
-        <span>O</span>
-        <span class="red">LOBO</span>
-        <span>EM MIM</span>
+        <span>MAPA DA</span>
+        <span class="red">GUERRA</span>
+        <span>INTERNA</span>
       </h1>
 
       <p class="hook">
-        Você sabe o que está fazendo…<br>
-        Sabia antes.<br>
-        Soube durante.<br><br>
-        E mesmo assim… fez.<br><br>
-        <span class="gold">Esse é o problema.</span>
+        Você sabe o que deveria fazer…<br>
+        mas, no momento decisivo,<br>
+        faz outra coisa.<br><br>
+
+        Isso não é falta de força.<br><br>
+
+        <span class="gold">Você só nunca entendeu onde essa guerra começa.</span>
       </p>
 
-      <a href="#baixar" class="cta">BAIXAR O CAPÍTULO 1 GRATUITAMENTE</a>
+      <a href="https://pay.hotmart.com/M105570628Q" class="cta" target="_blank" rel="noopener">
+        QUERO ENTENDER MINHA GUERRA INTERNA
+      </a>
     </div>
 
     <div class="cover-wrap">
-      <img src="O_Lobo_em_Mim.png" alt="Capa do livro O Lobo em Mim" class="cover">
+      <img src="MAPA%20DA%20GUERRA%20INTERNA.png" alt="Capa do Mapa da Guerra Interna" class="cover">
     </div>
   </section>
 
   <section class="section-dark">
     <div class="center">
       <p class="text-big">
-        Você decide.<br>
-        Você promete.<br>
-        Você recomeça.<br><br>
+        Você não está falhando por falta de disciplina.<br><br>
 
-        E então… volta.<br><br>
+        Você está tentando vencer uma guerra…<br>
+        sem entender o campo de batalha.<br><br>
 
-        Exatamente para o mesmo lugar.<br>
-        Com as mesmas justificativas.<br>
-        Com a mesma sensação de depois.<br><br>
-
-        <span class="gold">Isso não é fraqueza ocasional.<br>
-        Isso é padrão.</span>
+        <span class="gold">E é por isso que você sempre volta.</span>
       </p>
     </div>
   </section>
 
   <section class="section-red">
     <div class="center">
-      <h2 class="section-title">Existe algo em você</h2>
+      <h2 class="section-title">A luta não começa na queda</h2>
 
       <p class="text-medium">
-        Não é um erro isolado.<br>
-        Não é um momento de fraqueza.<br><br>
+        Ela começa antes.<br><br>
 
-        É algo mais antigo.<br>
-        Mais constante.<br><br>
+        Antes da ação.<br>
+        Antes da decisão.<br>
+        Antes do erro aparecer do lado de fora.<br><br>
 
-        Algo que não pede permissão…<br>
-        mas espera que você abra espaço.<br><br>
+        Existe uma inclinação silenciosa.<br>
+        Um movimento interno.<br>
+        Uma guerra que você sente… mas talvez nunca tenha conseguido explicar.<br><br>
 
-        E você abre.<br><br>
-
-        <span class="gold">Este livro chama isso de O Lobo.</span>
+        <span class="gold">O Mapa da Guerra Interna foi criado para expor isso.</span>
       </p>
     </div>
   </section>
 
   <section class="section-dark">
-    <h2 class="section-title">O que este livro vai confrontar em você</h2>
+    <h2 class="section-title">O que este mapa vai revelar</h2>
 
     <div class="cards">
       <div class="card">
-        <span class="card-icon">⚔️</span>
-        <h3 class="card-title">O CICLO</h3>
-        <p class="card-text">
-          Entenda por que você continua voltando… mesmo quando decide parar.
-        </p>
-      </div>
-
-      <div class="card">
         <span class="card-icon">👁️</span>
-        <h3 class="card-title">O MOMENTO</h3>
+        <h3 class="card-title">O CONFLITO</h3>
         <p class="card-text">
-          Reconheça o instante em que tudo ainda poderia ser diferente… e você não para.
-        </p>
-      </div>
-
-      <div class="card">
-        <span class="card-icon">🐺</span>
-        <h3 class="card-title">A VOZ</h3>
-        <p class="card-text">
-          Perceba a inclinação silenciosa que acontece antes da decisão.
+          Entenda por que você quer uma coisa… mas acaba fazendo outra.
         </p>
       </div>
 
@@ -497,7 +405,23 @@ importHotmart();
         <span class="card-icon">🔥</span>
         <h3 class="card-title">A RAIZ</h3>
         <p class="card-text">
-          Pare de chamar de “deslize” algo que já se tornou padrão.
+          Veja por que o problema não começa no comportamento, mas na natureza.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">⚔️</span>
+        <h3 class="card-title">A GUERRA</h3>
+        <p class="card-text">
+          Reconheça a batalha entre a carne e o Espírito dentro de você.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">✝️</span>
+        <h3 class="card-title">A DIREÇÃO</h3>
+        <p class="card-text">
+          Pare de lutar no escuro e veja para onde a Escritura aponta.
         </p>
       </div>
     </div>
@@ -505,58 +429,44 @@ importHotmart();
 
   <section class="section-red">
     <div class="center">
-      <h2 class="section-title">Este livro não foi escrito para te confortar</h2>
+      <h2 class="section-title">Isso não é teoria</h2>
 
       <p class="text-medium">
-        Ele foi escrito para te encontrar.<br><br>
+        É o que você já vive.<br><br>
 
-        Porque conforto é o que você busca quando quer se sentir melhor
-        sem mudar nada.<br><br>
+        Você decide.<br>
+        Você promete.<br>
+        Você tenta controlar.<br><br>
 
-        Mas existe algo em você que não vai desaparecer
-        só porque alguém disse palavras bonitas sobre ele.<br><br>
+        E então volta.<br><br>
 
-        <span class="gold">
-          Existe algo que se repete.<br>
-          Que volta.<br>
-          Que age antes que você perceba.
-        </span>
+        Não porque não sabe.<br>
+        Não porque não quer.<br><br>
+
+        Mas porque existe algo mais profundo acontecendo dentro de você.<br><br>
+
+        <span class="gold">E aquilo que você não enxerga continua te dominando.</span>
       </p>
     </div>
   </section>
 
-  <section class="offer" id="baixar">
+  <section class="offer" id="comprar">
     <div class="offer-box">
-      <h2 class="offer-title">Leia o Capítulo 1 gratuitamente</h2>
+      <h2 class="offer-title">Antes de tentar vencer, entenda a guerra.</h2>
 
       <p class="offer-subtitle">
-        Leia o início… e encare o que você já percebeu,
-        mas ainda não conseguiu nomear.
+        Acesse agora o Mapa da Guerra Interna e descubra onde a batalha começa,
+        por que você continua voltando e o que está operando dentro de você.
       </p>
 
-      <!-- OPÇÃO SIMPLES: baixar direto -->
-      <a class="cta" href="Capitulo1_OLoboEmMim.pdf" download>
-        QUERO ENTENDER O QUE DENTRO DE MIM QUER QUE ISSO CONTINUE
+      <div class="price">R$ 14,90</div>
+
+      <a class="cta" href="https://pay.hotmart.com/M105570628Q" target="_blank" rel="noopener">
+        QUERO ACESSAR O MAPA AGORA
       </a>
-<br><br>
-<a href="https://pay.hotmart.com/E105549950G" class="cta" target="_blank">
-  QUERO LER O LIVRO COMPLETO AGORA
-</a>
-
-<!-- OPÇÃO COM FORMULÁRIO:
-      Use esta parte quando conectar com Brevo, Mailchimp ou outro serviço.
-
-      <form class="lead-form" action="#" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <button type="submit" class="cta">
-          QUERO ENTENDER O QUE DENTRO DE MIM QUER QUE ISSO CONTINUE
-        </button>
-      </form>
-      -->
 
       <p class="small">
-        Acesso gratuito ao primeiro capítulo. Sem enrolação. Apenas a primeira página da sua confrontação.
+        Acesso imediato. Material digital. Direto ao ponto. Sem teoria vazia.
       </p>
     </div>
   </section>
@@ -564,56 +474,32 @@ importHotmart();
   <section class="final">
     <div class="center">
       <p class="text-big">
-        Enquanto você acreditar que o problema é o que você faz…<br><br>
+        A guerra já está acontecendo.<br><br>
 
-        você vai continuar tentando controlar o que faz.<br><br>
-
-        E controle… você já descobriu… não sustenta.<br><br>
+        A pergunta não é se você está nela.<br><br>
 
         <span class="gold">
-          Você não precisa de mais força.<br>
-          Você precisa entender o que está por trás.
+          A pergunta é:<br>
+          você vai continuar lutando no escuro…<br>
+          ou finalmente vai entender o que está enfrentando?
         </span>
       </p>
     </div>
   </section>
 
-  
+  <section style="text-align:center;padding:80px 10%;background:#000;">
+    <a href="https://pay.hotmart.com/M105570628Q" class="cta" target="_blank" rel="noopener">
+      QUERO ENTENDER MINHA GUERRA INTERNA
+    </a>
+  </section>
 
-
-
-
-<section style="text-align:center;padding:80px 10%;background:#000;">
-  <a href="https://pay.hotmart.com/E105549950G" class="cta" target="_blank">
-    QUERO LER O LIVRO COMPLETO AGORA
-  </a>
-</section>
-
-<footer>
+  <footer>
     <p class="verse">
-      “Vejo nos meus membros outra lei, guerreando contra a lei da minha mente…”
+      “A carne milita contra o Espírito, e o Espírito contra a carne…”
     </p>
-    <p class="ref">ROMANOS 7:23</p>
-    <p>Pastor Amauri Fernandes · O Lobo em Mim</p>
+    <p class="ref">GÁLATAS 5:17</p>
+    <p>Pastor Amauri Fernandes · Mapa da Guerra Interna</p>
   </footer>
-
-
-
-
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
