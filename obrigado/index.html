@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra Confirmada — Método Lobo Interior</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      background:#000;
+      color:#fffff0;
+      font-family:'Cormorant Garamond', serif;
+      text-align:center;
+      overflow-x:hidden;
+    }
+
+    .container {
+      max-width:920px;
+      margin:0 auto;
+      padding:80px 20px;
+    }
+
+    .title {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(42px,6vw,76px);
+      line-height:1;
+      margin-bottom:20px;
+    }
+
+    .gold { color:#D4AF37; }
+
+    .wolf-img {
+      max-width:360px;
+      width:100%;
+      margin:42px auto;
+      display:block;
+      border-radius:14px;
+      box-shadow:
+        0 0 45px rgba(0,0,0,0.9),
+        0 0 70px rgba(212,175,55,0.18);
+      filter:contrast(1.12) brightness(0.88);
+      animation:pulse 6s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform:scale(1); }
+      50% { transform:scale(1.025); }
+      100% { transform:scale(1); }
+    }
+
+    .text {
+      font-size:23px;
+      line-height:1.6;
+      color:#ccc;
+      margin-bottom:40px;
+    }
+
+    .box {
+      border:2px solid #D4AF37;
+      border-radius:24px;
+      padding:42px 32px;
+      margin:42px 0;
+      background:linear-gradient(135deg, rgba(30,0,0,.65), rgba(0,0,0,.95));
+      box-shadow:0 25px 80px rgba(0,0,0,.75);
+    }
+
+    .box h2 {
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:2.5px;
+      margin-bottom:20px;
+      color:#D4AF37;
+      font-size:30px;
+    }
+
+    .cta {
+      display:inline-block;
+      background:#8B0000;
+      color:#fff;
+      text-decoration:none;
+      padding:20px 38px;
+      border-radius:50px;
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:2.3px;
+      font-size:18px;
+      margin-top:20px;
+      transition:.3s ease;
+      box-shadow:0 12px 40px rgba(139,0,0,.55);
+    }
+
+    .cta:hover {
+      transform:translateY(-3px);
+      background:#b00000;
+      box-shadow:0 18px 60px rgba(139,0,0,.75);
+    }
+
+    .warning {
+      margin-top:42px;
+      font-size:19px;
+      line-height:1.5;
+      color:#aaa;
+    }
+
+    footer {
+      margin-top:85px;
+      border-top:1px solid rgba(212,175,55,0.25);
+      padding:35px 20px;
+      font-size:15px;
+      color:#777;
+    }
+
+    @media (max-width:700px) {
+      .container {
+        padding:60px 22px;
+      }
+
+      .text {
+        font-size:21px;
+      }
+
+      .box {
+        padding:34px 22px;
+      }
+
+      .cta {
+        width:100%;
+        padding:20px 24px;
+      }
+
+      .wolf-img {
+        max-width:310px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="title">
+      Compra <span class="gold">Confirmada</span>
+    </h1>
+
+    <img
+      src="lobo-olhar-tenebroso.png"
+      alt="O lobo ainda está aqui"
+      class="wolf-img"
+    >
+
+    <p class="text">
+      Você não apenas comprou algo.<br><br>
+      Você decidiu não continuar do mesmo jeito.
+    </p>
+
+    <div class="box">
+      <h2>ACESSO AO SEU PRODUTO</h2>
+      <p class="text">
+        O acesso foi enviado para o seu e-mail.<br>
+        Verifique também a caixa de spam ou promoções.
+      </p>
+    </div>
+
+    <div class="box">
+      <h2>PRÓXIMO PASSO</h2>
+      <p class="text">
+        Não deixe isso para depois.<br><br>
+        Comece hoje.<br>
+        Enquanto a decisão ainda está viva.
+      </p>
+    </div>
+
+    <a href="https://lobo.ministeriopastoramauri.com/" class="cta">
+      VOLTAR PARA A PÁGINA PRINCIPAL
+    </a>
+
+    <p class="warning">
+      O lobo ainda está aqui.<br>
+      A diferença é que agora você sabe disso.
+    </p>
+
+    <footer>
+      Pastor Amauri Fernandes · Método Lobo Interior
+    </footer>
+
+  </div>
+
+</body>
+</html>
