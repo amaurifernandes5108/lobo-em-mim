@@ -360,7 +360,7 @@
         </span>
       </p>
 
-      <a href="#hotmart-sales-funnel" class="cta" target="_blank" rel="noopener">
+      <a href="https://pay.hotmart.com/I105571615V" class="cta" target="_blank" rel="noopener">
         QUERO COMEÇAR OS 7 DIAS
       </a>
 
@@ -499,7 +499,7 @@
 
       <div class="price">R$ 9,90</div>
 
-      <a class="cta" href="#hotmart-sales-funnel" target="_blank" rel="noopener">
+      <a class="cta" href="https://pay.hotmart.com/I105571615V" target="_blank" rel="noopener">
         QUERO COMEÇAR AGORA
       </a>
 
@@ -526,7 +526,7 @@
   </section>
 
   <section style="text-align:center;padding:80px 10%;background:#000;">
-    <a href="#hotmart-sales-funnel" class="cta" target="_blank" rel="noopener">
+    <a href="https://pay.hotmart.com/I105571615V" class="cta" target="_blank" rel="noopener">
       QUERO COMEÇAR OS 7 DIAS
     </a>
   </section>
@@ -539,13 +539,5 @@
     <p>Pastor Amauri Fernandes · 7 Dias de Guerra Interna</p>
   </footer>
 
-<!-- HOTMART - Sales Funnel Widget -->
-<div id="hotmart-sales-funnel"></div>
-
-<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-<script>
-checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
-</script>
-<!-- HOTMART - Sales Funnel Widget -->
 </body>
 </html>
